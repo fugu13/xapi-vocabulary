@@ -1,0 +1,50 @@
+@base <http://www.adlnet.gov/expapi/ontology#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wordnet: <http://wordnet-rdf.princeton.edu/ontology#> .
+
+# a proposed minimal OWL ontology
+
+
+:Verb
+  rdfs:subClassOf skos:Concept .
+
+
+# note: not a Concept
+:Statement
+  rdfs:subClassOf prov:Entity .
+
+
+:thirdPartyLabel
+  rdfs:subPropertyOf skos:altLabel .
+
+
+:closelyRelatedNaturalLanguageTerm
+  rdfs:subPropertyOf skos:relatedMatch ;
+  rdfs:range wordnet:Synset .
+
+
+# The property chain rule, combined with :verb being a
+# subclass of :relatedVerb, means if you just want the
+# Verb used in a statement, check :verb, but if you
+# want any verb that's that verb or a narrower concept,
+# such as including 'sports:placed' when looking for
+# 'adlnet:completed', you can use :relatedVerb.
+# This will make querying for Statements expansively
+# much, much easier, and is here both for future use
+# and as an example of the power that can be built
+# with RDF vocabularies plus OWL.
+:relatedVerb
+  a owl:TransitiveProperty ;
+  rdfs:domain :Statement ;
+  rdfs:range :Verb ;
+  owl:PropertyChainAxiom (
+    :relatedVerb
+    skos:narrowerTransitive
+  ) .
+
+
+:verb
+  rdfs:subPropertyOf xapi:relatedVerb .
