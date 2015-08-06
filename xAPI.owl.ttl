@@ -1,4 +1,4 @@
-@base <http://www.adlnet.gov/expapi/ontology#> .
+@base <http://purl.org/xapi/ontology#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
