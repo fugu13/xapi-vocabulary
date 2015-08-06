@@ -1,5 +1,5 @@
 {
-    "@context": "http://notsurewhere.example.com/context.jsonld",
+    "@context": "https://raw.githubusercontent.com/fugu13/xapi-vocabulary/master/context.jsonld",
     "@id": "http://myvocab.example.com/xapi/",
     "@type": "ConceptScheme",
     "versions": [
