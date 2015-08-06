@@ -1,0 +1,59 @@
+@base <http://myvocab.example.com/xapi/another/> .
+@prefix xapi: <http://www.adlnet.gov/expapi/ontology#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix adlnet: <http://www.adlnet.gov/expapi/verbs/> .
+
+
+# a futuristic example of OWL someone working with xAPI 
+# data could use to 'fix up' Statement data to make them easier
+# to work with.
+
+# The scenario: someone put a video inside a rapid authoring
+# module that only knows how to report completion for it,
+# using adlnet:completed. There are other video Statements
+# in the dataset that use :viewed-video, and to work with
+# them together, it would be useful if the reporting tool
+# could 'act like' the Statements for the rapid authoring
+# video work the same way. Enter OWL: we declare that
+# there is some class of things, which is a subclass of
+# Statements that have the :viewed-video as a relatedVerb,
+# which is exactly equivalent to the intersection of
+# Statements that use adlnet:completed as the verb
+# and use our activity ID as the object.
+# In other words, this is expressing the following
+# implication:
+
+# If a Statement has the adlnet:completed verb and the
+# particular rapid authoring video activity ID, then
+# it must be treated as having :viewed-video for a 
+# related verb.
+
+# from then on, data analysis in a system that
+# does inference based on this can just use
+# :viewed-video everywhere, instead of needing to
+# special case the additional activity every time
+# a query is written.
+
+
+[]
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty xapi:relatedVerb ;
+    owl:hasValue :viewed-video
+  ] ;
+  owl:equivalentClass [
+    owl:intersectionOf (
+      [
+        a owl:Restriction ;
+        owl:onProperty xapi:verb ;
+        owl:hasValue adlnet:completed
+      ]
+      [
+        a owl:Restriction ;
+        owl:onProperty xapi:object ;
+        owl:hasValue <http://example.com/actual/video/activity/id>
+      ]
+    )
+  ] .
