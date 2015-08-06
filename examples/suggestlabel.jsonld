@@ -1,0 +1,8 @@
+{
+    "@context": "https://raw.githubusercontent.com/fugu13/xapi-vocabulary/master/context.jsonld",
+    "@id": "http://www.adlnet.gov/expapi/verbs/completed",
+    "@type": "Verb",
+    "thirdPartyLabel": {
+        "en": "finished"
+    }
+}

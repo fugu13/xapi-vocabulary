@@ -19,12 +19,6 @@
     "skos:editorialNote": "Depending on context, the actor used with many of these verbs might be an Agent (individual) or might be a Group (team). Keep that in mind when describing them.",
     "verbs": [
         {
-            "@id": "http://www.adlnet.gov/expapi/verbs/completed",
-            "thirdPartyLabel": {
-                "en": "finished"
-            }
-        },
-        {
             "@id": "http://myvocab.example.com/xapi/qualifiedfor",
             "skos:inScheme": {"@id": "2.0/"},
             "prefLabel": {
