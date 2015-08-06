@@ -1,0 +1,77 @@
+{
+    "@context": "http://notsurewhere.example.com/context.jsonld",
+    "@id": "http://myvocab.example.com/xapi/",
+    "@type": "ConceptScheme",
+    "versions": [
+        {
+            "@id": "http://myvocab.example.com/xapi/2.0/",
+            "wasRevisionOf": "http://myvocab.example.com/xapi/1.0/"
+        },
+        {
+            "@id": "http://myvocab.example.com/xapi/1.0/"
+        }
+    ],
+    "wasGeneratedBy": {
+        "name": {
+            "en": "Sports and Competition xAPI Vocabulary Working Group"
+        }
+    },
+    "skos:editorialNote": "Depending on context, the actor used with many of these verbs might be an Agent (individual) or might be a Group (team). Keep that in mind when describing them.",
+    "verbs": [
+        {
+            "@id": "http://www.adlnet.gov/expapi/verbs/completed",
+            "thirdPartyLabel": {
+                "en": "finished"
+            }
+        },
+        {
+            "@id": "http://myvocab.example.com/xapi/qualifiedfor",
+            "skos:inScheme": {"@id": "2.0/"},
+            "prefLabel": {
+                "en": "qualified for"
+            },
+            "definition": {
+                "en": "To be accepted as a participant for the Activity object by meeting some set of criteria"
+            },
+            "skos:scopeNote": {
+                "@value": "While provided here as part of a sports-focused vocabulary, this verb is not restricted to competitive events",
+                "@language": "en"
+            },
+            "examples": [{
+                "value": "{\n      \"actor\": { \"mbox\":\"athlete@example.com\" },\n      \"verb\": {\n        \"id\": \"http://myvocab.example.com/xapi/qualifiedFor\"\n        \"display\": { \"en\": \"qualified for\"}\n      },\n      \"object\": {\n        \"id\": \"http://www.olympic.org/rio-2016-summer-olympics\",\n        \"definition\": {\n          \"name\": {\"en\": \"Rio 2016\"}\n        }\n      }\n    }"
+            }]
+        },
+        {
+            "@id": "http://myvocab.example.com/xapi/placed",
+            "skos:inScheme": {"@id": "2.0/"},
+            "prefLabel": {
+                "en": "placed"
+            },
+            "altLabel": {
+                "en": "ranked"
+            },
+            "definition": {
+                "en": "To achieve a ranked outcome in the Activity object, which is a competitive event"
+            },
+            "broadMatch": ["http://www.adlnet.gov/expapi/verbs/completed"],
+            "examples": [{
+                "value": "{\n      \"actor\": { \"objectType\": \"Group\", \"mbox\":\"ukrainerelayteam@example.com\" },\n      \"verb\": {\n        \"id\": \"http://myvocab.example.com/xapi/placed\"\n        \"display\": { \"en\": \"placed\"}\n      },\n      \"object\": {\n        \"id\": \"http://www.olympic.org/olympic-results/london-2012/athletics/4x400m-relay-w#final\",\n        \"definition\": {\n          \"name\": {\"en\": \"London 2012 Women's Athletics 4x400 Relay Final\"}\n        }\n      }\n    }"
+            }],
+            "closelyRelatedNaturalLanguageTerm": "http://wordnet-rdf.princeton.edu/wn31/200661447-v"
+        },
+        {
+            "@id": "http://myvocab.example.com/xapi/medaled",
+            "skos:inScheme": {"@id": "2.0/"},
+            "prefLabel": {
+                "en": "medaled"
+            },
+            "definition": {
+                "en": "To receive a medal for achievement in a competitive event"
+            },
+            "broader": ["http://myvocab.example.com/xapi/placed"],
+            "examples": [{
+                "value": "{\n      \"actor\": { \"objectType\": \"Group\", \"mbox\":\"russiarelayteam@example.com\" },\n      \"verb\": {\n        \"id\": \"http://myvocab.example.com/xapi/medaled\"\n        \"display\": { \"en\": \"medaled\"}\n      },\n      \"object\": {\n        \"id\": \"http://www.olympic.org/olympic-results/london-2012/athletics/4x400m-relay-w#final\",\n        \"definition\": {\n          \"name\": {\"en\": \"London 2012 Women's Athletics 4x400 Relay Final\"}\n        }\n      }\n    }"
+            }]
+        }
+    ]
+}
