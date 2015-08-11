@@ -20,6 +20,9 @@
 :thirdPartyLabel
   rdfs:subPropertyOf skos:altLabel .
 
+:referenced
+  rdfs:subPropertyOf skos:inScheme .
+
 
 :closelyRelatedNaturalLanguageTerm
   rdfs:subPropertyOf skos:relatedMatch ;

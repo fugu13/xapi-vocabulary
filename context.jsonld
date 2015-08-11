@@ -53,6 +53,10 @@
         "@reverse": "skos:inScheme",
         "@type": "xapi:Verb"
     },
+    "references": {
+        "@reverse": "xapi:referenced",
+        "@type": "skos:Concept"
+    },
     "broadMatch": {
         "@id": "skos:broadMatch",
         "@type": "@id"
