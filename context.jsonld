@@ -54,7 +54,7 @@
         "@type": "xapi:Verb"
     },
     "references": {
-        "@reverse": "xapi:referenced",
+        "@reverse": "xapi:referencedBy",
         "@type": "skos:Concept"
     },
     "broadMatch": {
