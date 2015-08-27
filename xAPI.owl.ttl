@@ -20,7 +20,7 @@
 :thirdPartyLabel
   rdfs:subPropertyOf skos:altLabel .
 
-:referenced
+:referencedBy
   rdfs:subPropertyOf skos:inScheme .
 
 
