@@ -1,96 +1,98 @@
 {
-    "prov": "http://www.w3.org/ns/prov#",
-    "skos": "http://www.w3.org/2004/02/skos/core#",
-    "xapi": "http://purl.org/xapi/ontology#",
-    "versions": {
-        "@reverse": "prov:specializationOf",
-        "@type": "skos:ConceptScheme"
-    },
-    "ConceptScheme": "skos:ConceptScheme",
-    "Verb": "xapi:Verb",
-    "wasRevisionOf": {
-        "@id": "prov:wasRevisionOf",
-        "@type": "@id"
-    },
-    "wasGeneratedBy": {
-        "@id": "prov:wasGeneratedBy",
-        "@type": "@id"
-    },
-    "name": {
-        "@id": "http://xmlns.com/foaf/0.1/name",
-        "@container": "@language"
-    },
-    "vocabulary": {
-        "@id": "skos:inScheme",
-        "@type": "@id"
-    },
-    "prefLabel": {
-        "@id": "skos:prefLabel",
-        "@container": "@language"
-    },
-    "altLabel": {
-        "@id": "skos:altLabel",
-        "@container": "@language"
-    },
-    "thirdPartyLabel": {
-        "@id": "xapi:thirdPartyLabel",
-        "@container": "@language"
-    },
-    "definition": {
-        "@id": "skos:definition",
-        "@container": "@language"
-    },
-    "altLabel": {
-        "@id": "skos:altLabel",
-        "@container": "@language"
-    },
-    "examples": {
-        "@id": "skos:example",
-        "@type": "xapi:Statement"
-    },
-    "value": "prov:value",
-    "verbs": {
-        "@reverse": "skos:inScheme",
-        "@type": "xapi:Verb"
-    },
-    "references": {
-        "@reverse": "xapi:referencedBy",
-        "@type": "skos:Concept"
-    },
-    "broadMatch": {
-        "@id": "skos:broadMatch",
-        "@type": "@id"
-    },
-    "narrowMatch": {
-        "@id": "skos:narrowMatch",
-        "@type": "@id"
-    },
-    "broader": {
-        "@id": "skos:broader",
-        "@type": "@id"
-    },
-    "narrower": {
-        "@id": "skos:narrower",
-        "@type": "@id"
-    },
-    "closelyRelatedNaturalLanguageTerm": {
-        "@id": "xapi:closelyRelatedNaturalLanguageTerm",
-        "@type": "@id"
-    },
-    "related": {
-        "@id": "skos:related",
-        "@type": "@id"
-    },
-    "relatedMatch": {
-        "@id": "skos:relatedMatch",
-        "@type": "@id"
-    },
-    "exactMatch": {
-        "@id": "skos:exactMatch",
-        "@type": "@id"
-    },
-    "closeMatch": {
-        "@id": "skos:closeMatch",
-        "@type": "@id"
+    "@context": {
+        "prov": "http://www.w3.org/ns/prov#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
+        "xapi": "http://purl.org/xapi/ontology#",
+        "versions": {
+            "@reverse": "prov:specializationOf",
+            "@type": "skos:ConceptScheme"
+        },
+        "ConceptScheme": "skos:ConceptScheme",
+        "Verb": "xapi:Verb",
+        "wasRevisionOf": {
+            "@id": "prov:wasRevisionOf",
+            "@type": "@id"
+        },
+        "wasGeneratedBy": {
+            "@id": "prov:wasGeneratedBy",
+            "@type": "@id"
+        },
+        "name": {
+            "@id": "http://xmlns.com/foaf/0.1/name",
+            "@container": "@language"
+        },
+        "vocabulary": {
+            "@id": "skos:inScheme",
+            "@type": "@id"
+        },
+        "prefLabel": {
+            "@id": "skos:prefLabel",
+            "@container": "@language"
+        },
+        "altLabel": {
+            "@id": "skos:altLabel",
+            "@container": "@language"
+        },
+        "thirdPartyLabel": {
+            "@id": "xapi:thirdPartyLabel",
+            "@container": "@language"
+        },
+        "definition": {
+            "@id": "skos:definition",
+            "@container": "@language"
+        },
+        "altLabel": {
+            "@id": "skos:altLabel",
+            "@container": "@language"
+        },
+        "examples": {
+            "@id": "skos:example",
+            "@type": "xapi:Statement"
+        },
+        "value": "prov:value",
+        "verbs": {
+            "@reverse": "skos:inScheme",
+            "@type": "xapi:Verb"
+        },
+        "references": {
+            "@reverse": "xapi:referencedBy",
+            "@type": "skos:Concept"
+        },
+        "broadMatch": {
+            "@id": "skos:broadMatch",
+            "@type": "@id"
+        },
+        "narrowMatch": {
+            "@id": "skos:narrowMatch",
+            "@type": "@id"
+        },
+        "broader": {
+            "@id": "skos:broader",
+            "@type": "@id"
+        },
+        "narrower": {
+            "@id": "skos:narrower",
+            "@type": "@id"
+        },
+        "closelyRelatedNaturalLanguageTerm": {
+            "@id": "xapi:closelyRelatedNaturalLanguageTerm",
+            "@type": "@id"
+        },
+        "related": {
+            "@id": "skos:related",
+            "@type": "@id"
+        },
+        "relatedMatch": {
+            "@id": "skos:relatedMatch",
+            "@type": "@id"
+        },
+        "exactMatch": {
+            "@id": "skos:exactMatch",
+            "@type": "@id"
+        },
+        "closeMatch": {
+            "@id": "skos:closeMatch",
+            "@type": "@id"
+        }
     }
 }
