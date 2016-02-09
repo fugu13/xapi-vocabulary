@@ -15,7 +15,7 @@
         },
         "wasGeneratedBy": {
             "@id": "prov:wasGeneratedBy",
-            "@type": "@id"
+            "@type": "prov:Activity"
         },
         "name": {
             "@id": "http://xmlns.com/foaf/0.1/name",
